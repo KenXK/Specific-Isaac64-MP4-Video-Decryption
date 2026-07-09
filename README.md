@@ -16,7 +16,7 @@ NodeJS、Python及相关库
 充裕的时间和耐心、稳定的供电（doge）
 
 ## 测试平台
-i9-13900H Laptop（80W）  
+i9-13900H Laptop（14C20T，80W）  
 双通道32GB DDR5 4800MHz  
 1TB SSD（PCIe4.0×4、NVMe）  
 1TB SSD（USB3.0）
