@@ -60,4 +60,4 @@ Evil0ctal/WeChat-Channels-Video-File-Decryption: 一个可在线运行的微信�
 https://github.com/Evil0ctal/WeChat-Channels-Video-File-Decryption/issues/9  
 到底怎么获取DecodeKey · Issue #9 · Evil0ctal/WeChat-Channels-Video-File-Decryption
 
-基于参考情况，本项目使用MIT协议。
+基于参考情况，本项目使用MIT协议。项目不包括对既有软件或算法文件的逆向或破解，不包括对任何系统或服务的入侵或破坏。如果侵犯您的权益，请联系我删除。
