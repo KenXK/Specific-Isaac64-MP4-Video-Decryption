@@ -39,12 +39,12 @@ WASM文件可以选择自行从官方CDN下载，Evil0ctal/WeChat-Channels-Video
 实测20亿条约3h44min（全程显示器90W供电，风扇全速模式）  
 实测20亿条约4h43min（全程200W ADP DC适配器，风扇标准模式）  
 
-**2-1、（可选）使用`build_index_multi.py`或`build_index_single.py`生成按reserved keystream排序的彩虹表副本，便于二分查找快速解密（注意设置临时文件目录及输出目录，预留足够空间）**
+**2-1、（可选）使用`build_index_multi.py`或`build_index_single.py`生成按reserved keystream排序的彩虹表副本，便于二分查找快速解密（注意设置临时文件目录及输出目录，预留足够空间）**  
 （测试采用分批生成彩虹表，装在某个目录下的“0-20亿”“20亿-40亿”“40亿-80亿”“80亿-100亿”四个文件夹，每个文件夹有part_000.bin到part_018.bin十九个二进制文件。如果您的分批和我不一样，需要修改排序py和/或解密py）
 实测`build_index_single.py`，输入输出路径均为上述外置SSD，临时文件路径为上述内置SSD，全程200W DC适配器，风扇全速模式，约4.5h  
-<img width="720" height="1572" alt="4fb4f4b76d9d11b554a1797520484ae1" src="https://github.com/user-attachments/assets/173daadb-6162-4c98-ae03-498e1e680e25" />  
+<img width="640" alt="4fb4f4b76d9d11b554a1797520484ae1" src="https://github.com/user-attachments/assets/173daadb-6162-4c98-ae03-498e1e680e25" />  
 
-**2-2、（可选，未实测成功）使用`build_buckets_V1.0_17GB+.py`生成“桶排序”方案的彩虹表副本（65536个彩虹表碎片桶）**
+**2-2、（可选，未实测成功）使用`build_buckets_V1.0_17GB+.py`生成“桶排序”方案的彩虹表副本（65536个彩虹表碎片桶）**  
 （感谢小伙伴提供的桶排序思路）
 如果爆内存，请尝试`build_buckets_V1.0_17GB-`，或带上py、运行日志、机器配置等信息借助AI或在线Claw修改脚本参数  
 实测`build_buckets_V1.0_17GB+.py`，输入路径为上述外置SSD，输出路径为上述内置SSD，全程200W DC适配器，风扇全速模式，约1h  
@@ -631,14 +631,14 @@ WASM文件可以选择自行从官方CDN下载，Evil0ctal/WeChat-Channels-Video
   03:55:31 [MainThread] 总计:    3635s (60.6分钟)
 </details>
 
-**3-1、使用`decrypt.py`解密视频（自动识别二分or遍历模式，可通过参数选择仅查找key、输入key直接解密、单个视频/批量解密）**
+**3-1、使用`decrypt.py`解密视频（自动识别二分or遍历模式，可通过参数选择仅查找key、输入key直接解密、单个视频/批量解密）**  
 以下均将彩虹表放在内置SSD上测试  
 实测未排序（遍历全表）查表耗时272s，总耗时277s  
-<img width="720" height="1805" alt="PixPin_2026-07-12_02-20-19" src="https://github.com/user-attachments/assets/cb9b6cca-89da-48fa-a521-99470cd7c198" />  
+<img width="640" alt="PixPin_2026-07-12_02-20-19" src="https://github.com/user-attachments/assets/cb9b6cca-89da-48fa-a521-99470cd7c198" />  
 实测排序后（二分查找）查表耗时7.5ms和9.7ms（注意单位哟），总耗时约2s  
-<img width="720" height="1049" alt="PixPin_2026-07-12_02-29-38" src="https://github.com/user-attachments/assets/7c4909a4-970a-4c58-9c0a-2a64133a866a" />  
+<img width="640" alt="PixPin_2026-07-12_02-29-38" src="https://github.com/user-attachments/assets/7c4909a4-970a-4c58-9c0a-2a64133a866a" />  
 
-**3-2、使用`decrypt_2.0.py`解密视频（自动识别桶化or遍历模式，可通过参数选择仅查找key、输入key直接解密、单个视频/批量解密）**
+**3-2、使用`decrypt_2.0.py`解密视频（自动识别桶化or遍历模式，可通过参数选择仅查找key、输入key直接解密、单个视频/批量解密）**  
 此py优先尝试测试中绝大多数样本直播回放视频的box_size=28（样本覆盖面小，还没遇到其他的），失败后尝试其他。  
 实测桶查找失败😅下次再改，今天太晚zao了
 
