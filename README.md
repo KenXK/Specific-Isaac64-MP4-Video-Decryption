@@ -40,7 +40,7 @@ WASM文件可以选择自行从官方CDN下载，Evil0ctal/WeChat-Channels-Video
 实测20亿条约4h43min（全程200W ADP DC适配器，风扇标准模式）  
 
 **2-1、（可选）使用`build_index_multi.py`或`build_index_single.py`生成按reserved keystream排序的彩虹表副本，便于二分查找快速解密（注意设置临时文件目录及输出目录，预留足够空间）**  
-（测试采用分批生成彩虹表，装在某个目录下的“0-20亿”“20亿-40亿”“40亿-80亿”“80亿-100亿”四个文件夹，每个文件夹有part_000.bin到part_018.bin十九个二进制文件。如果您的分批和我不一样，需要修改排序py和/或解密py）
+（测试采用分批生成彩虹表，装在某个目录下的“0-20亿”“20亿-40亿”“40亿-80亿”“80亿-100亿”四个文件夹，每个文件夹有part_000.bin到part_018.bin十九个二进制文件。如果您的分批和我不一样，需要修改排序py和/或解密py）  
 实测`build_index_single.py`，输入输出路径均为上述外置SSD，临时文件路径为上述内置SSD，全程200W DC适配器，风扇全速模式，约4.5h  
 <img width="480" alt="4fb4f4b76d9d11b554a1797520484ae1" src="https://github.com/user-attachments/assets/173daadb-6162-4c98-ae03-498e1e680e25" />  
 
